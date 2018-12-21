@@ -1,0 +1,12 @@
+{
+  "name": "quickmern",
+  "version": "1.0.0",
+  "description": "Quickly develop isomorphic react sites",
+  "main": "index.js",
+  "author": "Charlie Hay",
+  "license": "UNLICENCED",
+  "homepage": "https://github.com/thedevenvironment/thedevenvironment.com",
+  "scripts": {
+    "setup": "sh ./scripts/setup.sh"
+  }
+}
