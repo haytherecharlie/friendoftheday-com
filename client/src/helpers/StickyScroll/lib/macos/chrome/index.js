@@ -1,13 +1,19 @@
 function macOsChrome(element) {
   const keys = { 37: 1, 38: 1, 39: 1, 40: 1 }
   let paused = false
-  let el = element
   let anchor = null
 
   const init = () => {
     windowResize()
     initialPosition()
     createScrollListener()
+  }
+
+  const windowResize = () => {
+    window.addEventListener('resize', () => {
+      anchor = element.offsetWidth
+      initialPosition()
+    })
   }
 
   const initialPosition = () => element.scroll(element.offsetWidth, 0)
@@ -74,13 +80,6 @@ function macOsChrome(element) {
       paused = false
       enableScroll()
     }, 1500)
-  }
-
-  const windowResize = () => {
-    window.addEventListener('resize', () => {
-      anchor = element.scrollLeft
-      console.log(anchor)
-    })
   }
 
   init()
