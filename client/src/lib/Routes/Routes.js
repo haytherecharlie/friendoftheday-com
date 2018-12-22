@@ -9,7 +9,12 @@ import { withRouter, Switch, Route } from 'react-router-dom'
 import Home from '../../components/pages/Home/Home'
 
 function Routes({ location: { pathname } }) {
-  useEffect(() => window.notification.listening && window.notification.hide(), [pathname])
+  useEffect(
+    () => {
+      window.notification.listening && window.notification.hide()
+    },
+    [pathname]
+  )
 
   return (
     <Switch>

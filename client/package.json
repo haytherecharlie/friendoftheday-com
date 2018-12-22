@@ -18,6 +18,7 @@
     "react-icons": "^3.2.2",
     "react-redux": "latest",
     "react-router-dom": "latest",
+    "react-transition-group": "^2.5.2",
     "redux": "latest"
   },
   "devDependencies": {
