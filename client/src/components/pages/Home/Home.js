@@ -4,28 +4,25 @@
  * Home | Component
  ******************************************/
 
-import React, { createRef, useEffect } from 'react'
-import StickyScroll from '../../../helpers/StickyScroll'
+import React from 'react'
+import Swiper from '../../elements/Swiper/Swiper'
+import MessageInput from '../../elements/MessageInput/MessageInput'
+import MessageConversation from '../../elements/MessageConversation/MessageConversation'
 import './styles/Home.scss'
 
-function ImageSlider() {
-  const swiperRef = createRef()
-
-  useEffect(() => {
-    const el = swiperRef.current
-    StickyScroll(el)
-    return () => el.removeEventListener('scroll', () => console.log('removed event'))
-  }, [])
-
+function Home() {
   return (
-    <div className="swiper" ref={swiperRef}>
-      <div className="swiper__wrapper">
-        <div className="swiper__child one">one</div>
-        <div className="swiper__child two">two</div>
-        <div className="swiper__child three">three</div>
-      </div>
+    <div className="home">
+      <Swiper>
+        <div className="their-profile" />
+        <div className="message-center">
+          <MessageConversation />
+          <MessageInput />
+        </div>
+        <div className="my-profile">three</div>
+      </Swiper>
     </div>
   )
 }
 
-export default ImageSlider
+export default Home

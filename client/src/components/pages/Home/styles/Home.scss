@@ -5,29 +5,17 @@
  ******************************************/
 
 @import '../../../../assets/styles/variable';
-.swiper {
-  display: block;
-  height: 100vh;
-  width: 100vw;
-  overflow-x: scroll;
-
-  &__wrapper {
-    width: 300%;
-    height: 100%;
-    background: yellowgreen;
-  }
-
-  &__child {
-    width: calc(100% / 3);
-
-    &.one {
-      background: orange;
-    }
-    &.two {
-      background: blueviolet;
-    }
-    &.three {
-      background: yellowgreen;
+.home {
+  background: #e3e2dd;
+  .message-center {
+    flex-direction: column;
+    & > * {
+      &:first-child {
+        flex: 1 0 50%;
+      }
+      &:last-child {
+        flex: 0 0 50px;
+      }
     }
   }
 }

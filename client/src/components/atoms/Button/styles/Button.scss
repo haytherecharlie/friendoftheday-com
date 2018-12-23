@@ -1,0 +1,27 @@
+/*******************************************
+ * © 2018 Charlie Hay
+ * ---------------------
+ * Button | Styles
+ ******************************************/
+
+@import '../../../../assets/styles/variable';
+.button {
+  height: 30px;
+  flex: 0 0 30px;
+  background: $skyBlue;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+
+  &__icon {
+    height: 15px;
+    margin-right: -2px;
+    margin-bottom: -2px;
+    fill: $white;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 1px $blue;
+    outline: none;
+  }
+}

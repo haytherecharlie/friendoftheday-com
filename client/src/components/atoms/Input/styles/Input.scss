@@ -1,0 +1,26 @@
+/*******************************************
+ * © 2018 Charlie Hay
+ * ---------------------
+ * Input | Styles
+ ******************************************/
+
+@import '../../../../assets/styles/variable';
+.input {
+  border: 1px solid $lightGray;
+  border-radius: 25px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 15px;
+  padding: 0 1rem;
+  flex: 1 0 200px;
+  margin-right: 1rem;
+
+  &::placeholder {
+    color: $lightGray;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 1px $blue;
+    outline: none;
+  }
+}

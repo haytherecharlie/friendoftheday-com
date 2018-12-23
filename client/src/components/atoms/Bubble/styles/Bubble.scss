@@ -1,0 +1,49 @@
+/*******************************************
+ * © 2018 Charlie Hay
+ * ---------------------
+ * Bubble | Styles
+ ******************************************/
+
+@import '../../../../assets/styles/variable';
+.bubble {
+  flex-direction: column;
+  padding: 0.2rem;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0;
+  max-width: 75%;
+
+  .bubble__message {
+    font-weight: 800;
+    font-size: 14px;
+  }
+
+  .bubble__timestamp {
+    font-size: 10px;
+    color: $lightGray;
+  }
+
+  &.received {
+    background: $blue;
+    align-self: flex-start;
+
+    .bubble__message {
+      color: $white;
+    }
+
+    .bubble__timestamp {
+      align-self: flex-start;
+      color: $darkGray;
+    }
+  }
+
+  &.sent {
+    background: $lightestGray;
+    align-self: flex-end;
+    color: $black;
+
+    .bubble__timestamp {
+      align-self: flex-end;
+    }
+  }
+}

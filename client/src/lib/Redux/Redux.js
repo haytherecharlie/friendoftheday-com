@@ -6,6 +6,7 @@
 
 import { createStore } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
+import defaultMessages from './defaultMessages.json'
 
 class Redux {
   constructor() {
@@ -13,27 +14,36 @@ class Redux {
   }
 
   initialState = () => ({
-    value: 'wow!'
+    user: {
+      uid: '01',
+      name: 'Charlie Hay'
+    },
+    messages: defaultMessages
   })
 
   types = {
-    ACTION: 'ACTION'
+    SET_MESSAGE: 'SET_MESSAGE'
   }
 
-  action = status => ({
-    type: this.types.ACTION,
-    status
+  setMessage = message => ({
+    type: this.types.SET_MESSAGE,
+    message
   })
 
   reducers = (state = this.state, action) => {
     switch (action.type) {
-      case this.types.ACTION:
-        return { ...state }
+      case this.types.SET_MESSAGE:
+        let newArray = state.messages.slice()
+        newArray.splice(newArray.length, 0, action.message)
+        return { ...state, messages: newArray }
+
       default:
         return state
     }
   }
 }
 
-const { reducers, state } = new Redux()
+const redux = new Redux()
+const { reducers, state } = redux
+export const { setMessage } = redux
 export const store = createStore(reducers, state, composeWithDevTools())

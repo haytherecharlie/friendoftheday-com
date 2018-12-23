@@ -1,0 +1,23 @@
+/*******************************************
+ * © 2018 Charlie Hay
+ * ---------------------
+ * Swiper | Styles
+ ******************************************/
+
+@import '../../../../assets/styles/variable';
+@import '../../../../assets/styles/variable';
+.swiper {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: scroll;
+
+  &__wrapper {
+    width: 300%;
+    height: 100%;
+
+    & > div {
+      width: calc(100% / 3);
+    }
+  }
+}
