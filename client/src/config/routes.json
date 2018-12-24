@@ -1,5 +1,3 @@
 {
-  "HOME": "/",
-  "LOGIN": "/login",
-  "MESSENGER": "/messenger"
+  "HOME": "/"
 }

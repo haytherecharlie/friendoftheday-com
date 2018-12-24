@@ -12,10 +12,10 @@ import Login from '../../components/pages/Login/Login'
 import routes from '../../config/routes.json'
 
 function Routes({ location: { pathname } }) {
-  const [loggedIn, changeLogIn] = useState('spinner')
+  const [auth, changeAuth] = useState('spinner')
 
   useEffect(() => {
-    const observer = firebase.auth().onAuthStateChanged(user => changeLogIn(!!user))
+    const observer = firebase.auth().onAuthStateChanged(user => changeAuth(!!user))
     return () => observer()
   }, [])
 
@@ -31,9 +31,7 @@ function Routes({ location: { pathname } }) {
       <Route
         exact
         path={routes.HOME}
-        render={props =>
-          loggedIn === true ? <Home {...props} /> : <Login {...props} auth={loggedIn} />
-        }
+        render={props => (auth === true ? <Home {...props} /> : <Login {...props} auth={auth} />)}
       />
     </Switch>
   )
