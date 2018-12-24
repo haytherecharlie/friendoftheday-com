@@ -2,16 +2,61 @@
   {
     "sid": "01",
     "timestamp": 1545607994433,
-    "text": "Hey!"
+    "text": "Hey Jill, how are you doing?"
   },
   {
     "sid": "02",
     "timestamp": 1545607994433,
-    "text": "Hey!"
+    "text": "Hi Richard! I've been pretty good - super busy with work."
   },
   {
     "sid": "01",
     "timestamp": 1545607994433,
-    "text": "what's up?!"
+    "text": "ahh that's good, you know what they say, work hard play hard."
+  },
+  {
+    "sid": "01",
+    "timestamp": 1545607994433,
+    "text": "I was wondering if you still had that cottage up in the muskokas?"
+  },
+  {
+    "sid": "02",
+    "timestamp": 1545607994433,
+    "text": "Yeah I do, my family was going to head up there this weekend for a little getaway, but if you're looking to rent it out from us, we could find a time in august."
+  },
+  {
+    "sid": "01",
+    "timestamp": 1545607994433,
+    "text": "That's amazing, thanks for being so generous. What price are you looking for if we stay for a week?"
+  },
+  {
+    "sid": "02",
+    "timestamp": 1545607994433,
+    "text": "Hmmm, that's not something I can really say. I'll have to check with my husband."
+  },
+  {
+    "sid": "01",
+    "timestamp": 1545607994433,
+    "text": "That sounds great, please don't say anything to Mary, this is kinda a secret getaway."
+  },
+  {
+    "sid": "02",
+    "timestamp": 1545607994433,
+    "text": "Wow, great idea! She's gonna love it."
+  },
+  {
+    "sid": "02",
+    "timestamp": 1545607994433,
+    "text": "I will keep my lips sealed!"
+  },
+  {
+    "sid": "01",
+    "timestamp": 1545607994433,
+    "text": "Okay great, I'll send you a message later on this week."
+  },
+  {
+    "sid": "02",
+    "timestamp": 1545607994433,
+    "text": "I'll do the same."
   }
 ]

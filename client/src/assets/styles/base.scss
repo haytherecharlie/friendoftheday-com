@@ -5,6 +5,10 @@
  ******************************************/
 
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+@font-face {
+  font-family: countdown;
+  src: url('../fonts/countdown.ttf');
+}
 @import './reboot';
 @import './body';
 @import './wildcard';

@@ -16,7 +16,17 @@ class Redux {
   initialState = () => ({
     user: {
       uid: '01',
-      name: 'Charlie Hay'
+      name: 'Charlie Hay',
+      picture: '../../assets/images/charlie.png',
+      bio:
+        'Born in London, Ontario, Canada. Living in Toronto where I work as a Software Developer.'
+    },
+    partner: {
+      uid: '02',
+      name: 'Phillip Duby',
+      picture: '../../assets/images/charlie.png',
+      bio:
+        'Born in London, Ontario, Canada. Living in Toronto where I work as a Software Developer.'
     },
     messages: defaultMessages
   })

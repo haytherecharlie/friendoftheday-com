@@ -1,0 +1,12 @@
+/*******************************************
+ * © 2018 Charlie Hay
+ * ---------------------
+ * Conversation | Styles
+ ******************************************/
+
+@import '../../../../assets/styles/variable';
+.conversation {
+  padding: 60px 1rem 60px 1rem;
+  flex-direction: column;
+  overflow: scroll;
+}

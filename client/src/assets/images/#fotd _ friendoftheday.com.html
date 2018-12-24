@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="120x120" href="http://localhost:3000/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:3000/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:3000/favicons/favicon-16x16.png">
+    <link rel="manifest" href="http://localhost:3000/favicons/site.webmanifest">
+    <link rel="mask-icon" href="http://localhost:3000/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="http://localhost:3000/favicons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="#fotd">
+    <meta name="application-name" content="#fotd">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>#fotd | friendoftheday.com</title>
+  <style type="text/css">@charset "UTF-8";
+/*******************************************
+ * © 2018 Charlie Hay
+ * ---------------------
+ * Swiper | Styles
+ ******************************************/
+/*******************************************
+ * © 2019 Charlie Hay
+ * ---------------------
+ * Variable | Styles
+ ******************************************/
+/* Shades */
+/* Purple */
+/* Blue */
+/* Media Width */
+/*******************************************
+ * © 2019 Charlie Hay
+ * ---------------------
+ * Variable | Styles
+ ******************************************/
+/* Shades */
+/* Purple */
+/* Blue */
+/* Media Width */
+.swiper {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: scroll; }
+  .swiper__wrapper {
+    width: 300%;
+    height: 100%; }
+    .swiper__wrapper > div {
+      width: calc(100% / 3); }
+</style><style type="text/css">@charset "UTF-8";
+/*******************************************
+ * © 2018 Charlie Hay
+ * ---------------------
+ * Button | Styles
+ ******************************************/
+/*******************************************
+ * © 2019 Charlie Hay
+ * ---------------------
+ * Variable | Styles
+ ******************************************/
+/* Shades */
+/* Purple */
+/* Blue */
+/* Media Width */
+.button {
+  height: 30px;
+  flex: 0 0 30px;
+  background: #7550c3;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center; }
+  .button__icon {
+    height: 15px;
+    margin-right: -2px;
+    margin-bottom: -2px;
+    fill: #ffffff; }
+  .button:focus {
+    box-shadow: 0 0 0 1px #8860d0;
+    outline: none; }
+</style><style type="text/css">@charset "UTF-8";
+/*******************************************
+ * © 2018 Charlie Hay
+ * ---------------------
+ * Input | Styles
+ ******************************************/
+/*******************************************
+ * © 2019 Charlie Hay
+ * ---------------------
+ * Variable | Styles
+ ******************************************/
+/* Shades */
+/* Purple */
+/* Blue */
+/* Media Width */
+.input {
+  border: 1px solid #c1c1c1;
+  border-radius: 25px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 15px;
+  padding: 0 1rem;
+  flex: 1 0 200px;
+  margin-right: 1rem; }
+  .input::-webkit-input-placeholder {
+    color: #c1c1c1; }
+  .input::-ms-input-placeholder {
+    color: #c1c1c1; }
+  .input::placeholder {
+    color: #c1c1c1; }
+  .input:focus {
+    box-shadow: 0 0 0 1px #8860d0;
+    outline: none; }
+</style><style type="text/css">@charset "UTF-8";
+/*******************************************
+ * © 2018 Charlie Hay
+ * ---------------------
+ * MessageInput | Styles
+ ******************************************/
+/*******************************************
+ * © 2019 Charlie Hay
+ * ---------------------
+ * Variable | Styles
+ ******************************************/
+/* Shades */
+/* Purple */
+/* Blue */
+/* Media Width */
+.messageinput {
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid #c1c1c1;
+  background: rgba(255, 255, 255, 0.85);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0; }
+</style><style type="text/css">@charset "UTF-8";
+/*******************************************
+ * © 2018 Charlie Hay
+ * ---------------------
+ * Bubble | Styles
+ ******************************************/
+/*******************************************
+ * © 2019 Charlie Hay
+ * ---------------------
+ * Variable | Styles
+ ******************************************/
+/* Shades */
+/* Purple */
+/* Blue */
+/* Media Width */
+.bubble {
+  flex-direction: column;
+  padding: 0.2rem;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0;
+  max-width: 75%;
+  overflow: auto; }
+  .bubble .bubble__message {
+    display: block;
+    font-weight: 900;
+    font-size: 14px; }
+  .bubble .bubble__timestamp {
+    display: block;
+    font-size: 10px;
+    color: #444444; }
+  .bubble.received {
+    background: #8860d0;
+    align-self: flex-start; }
+    .bubble.received .bubble__message {
+      color: #ffffff; }
+    .bubble.received .bubble__timestamp {
+      align-self: flex-start;
+      color: #444444; }
+  .bubble.sent {
+    background: #c1c8e4;
+    align-self: flex-end;
+    color: #222222; }
+    .bubble.sent .bubble__timestamp {
+      align-self: flex-end; }
+</style><style type="text/css">@charset "UTF-8";
+/*******************************************
+ * © 2018 Charlie Hay
+ * ---------------------
+ * MessageConversation | Styles
+ ******************************************/
+/*******************************************
+ * © 2019 Charlie Hay
+ * ---------------------
+ * Variable | Styles
+ ******************************************/
+/* Shades */
+/* Purple */
+/* Blue */
+/* Media Width */
+.messageconversation {
+  padding: 60px 1rem 60px 1rem;
+  flex-direction: column;
+  overflow: scroll; }
+</style><style type="text/css">@charset "UTF-8";
+/*******************************************
+ * © 2018 Charlie Hay
+ * ---------------------
+ * Countdown | Styles
+ ******************************************/
+/*******************************************
+ * © 2019 Charlie Hay
+ * ---------------------
+ * Variable | Styles
+ ******************************************/
+/* Shades */
+/* Purple */
+/* Blue */
+/* Media Width */
+.countdown {
+  font-family: countdown;
+  font-size: 20px;
+  width: 131px;
+  font-weight: 500; }
+</style><style type="text/css">@charset "UTF-8";
+/*******************************************
+ * © 2018 Charlie Hay
+ * ---------------------
+ * Header | Styles
+ ******************************************/
+/*******************************************
+ * © 2019 Charlie Hay
+ * ---------------------
+ * Variable | Styles
+ ******************************************/
+/* Shades */
+/* Purple */
+/* Blue */
+/* Media Width */
+.header {
+  width: 100vw;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid #c1c8e4;
+  border-top: 4px solid #8860d0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .header__logo {
+    height: 20px;
+    margin-top: -4px; }
+</style><style type="text/css">@charset "UTF-8";
+/*******************************************
+ * © 2018 Charlie Hay
+ * ---------------------
+ * Profile | Styles
+ ******************************************/
+/*******************************************
+ * © 2019 Charlie Hay
+ * ---------------------
+ * Variable | Styles
+ ******************************************/
+/* Shades */
+/* Purple */
+/* Blue */
+/* Media Width */
+.profile {
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 2rem; }
+  .profile__picture {
+    width: 30%;
+    border-radius: 50%; }
+  .profile__name {
+    margin: 1rem 0; }
+  .profile__bio {
+    text-align: center; }
+</style><style type="text/css">@charset "UTF-8";
+/*******************************************
+ * © 2018 Charlie Hay
+ * ---------------------
+ * Home | Styles
+ ******************************************/
+/*******************************************
+ * © 2019 Charlie Hay
+ * ---------------------
+ * Variable | Styles
+ ******************************************/
+/* Shades */
+/* Purple */
+/* Blue */
+/* Media Width */
+.home {
+  background: #eae6ed; }
+  .home .message-center {
+    flex-direction: column;
+    position: relative; }
+    .home .message-center > *:nth-child(2) {
+      flex: 1 0 50%; }
+    .home .message-center > *:last-child {
+      flex: 0 0 50px; }
+</style><style type="text/css">@charset "UTF-8";
+/*******************************************
+ * © 2018 Charlie Hay
+ * ---------------------
+ * Spinner | Styles
+ ******************************************/
+/*******************************************
+ * © 2019 Charlie Hay
+ * ---------------------
+ * Variable | Styles
+ ******************************************/
+/* Shades */
+/* Purple */
+/* Blue */
+/* Media Width */
+svg.spinner {
+  width: 40px;
+  height: 40px;
+  x: 0px;
+  y: 0px;
+  viewbox: 0 0 40 40; }
+  svg.spinner circle {
+    fill: transparent;
+    stroke: #ffffff;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 125.6;
+    -webkit-transform-origin: 20px 20px 0;
+    transform-origin: 20px 20px 0;
+    -webkit-animation: spinner 2s linear infinite;
+    animation: spinner 2s linear infinite; }
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    stroke-dashoffset: 26.4; }
+  50% {
+    -webkit-transform: rotate(720deg);
+    stroke-dashoffset: 125.6; }
+  100% {
+    -webkit-transform: rotate(1080deg);
+    stroke-dashoffset: 26.4; } }
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    stroke-dashoffset: 26.4; }
+  50% {
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
+    stroke-dashoffset: 125.6; }
+  100% {
+    -webkit-transform: rotate(1080deg);
+            transform: rotate(1080deg);
+    stroke-dashoffset: 26.4; } }
+</style><style type="text/css">@charset "UTF-8";
+/*******************************************
+ * © 2018 Charlie Hay
+ * ---------------------
+ * Login | Styles
+ ******************************************/
+/*******************************************
+ * © 2019 Charlie Hay
+ * ---------------------
+ * Variable | Styles
+ ******************************************/
+/* Shades */
+/* Purple */
+/* Blue */
+/* Media Width */
+.login {
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(/static/media/wallpaper.c937c18b.jpg) no-repeat center;
+  background-size: 100%; }
+  .login__logo {
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 1rem; }
+  .login .firebaseui-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+</style><style type="text/css">@import url(https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c);</style><style type="text/css">@charset "UTF-8";
+/*******************************************
+ * © 2019 Charlie Hay
+ * ---------------------
+ * Base | Styles
+ ******************************************/
+@font-face {
+  font-family: countdown;
+  src: url(/static/media/countdown.1e670d88.ttf); }
+
+/*******************************************
+ * © 2019 Charlie Hay
+ * ---------------------
+ * Reboot | Styles
+ ******************************************/
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+pre,
+ul {
+  margin-top: 0; }
+
+address,
+dl,
+ol,
+p,
+pre,
+ul {
+  margin-bottom: 1rem; }
+
+body,
+caption {
+  text-align: left; }
+
+button,
+hr,
+input {
+  overflow: visible; }
+
+pre,
+textarea {
+  overflow: auto; }
+
+div {
+  display: flex; }
+
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+legend,
+main,
+nav,
+section {
+  display: block; }
+
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+legend {
+  margin-bottom: 0; }
+
+address,
+legend {
+  line-height: inherit; }
+
+progress,
+sub,
+sup {
+  vertical-align: baseline; }
+
+label,
+output {
+  display: inline-block; }
+
+*,
+::after,
+::before {
+  box-sizing: border-box; }
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent; }
+
+@-ms-viewport {
+  width: device-width; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff; }
+
+[tabindex='-1']:focus {
+  outline: 0 !important; }
+
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+abbr[data-original-title],
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: 0; }
+
+address {
+  font-style: normal; }
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin-bottom: 0; }
+
+dt {
+  font-weight: 700; }
+
+dd {
+  margin-left: 0; }
+
+blockquote,
+figure {
+  margin: 0 0 1rem; }
+
+dfn {
+  font-style: italic; }
+
+b,
+strong {
+  font-weight: bolder; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+a {
+  color: #222222;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects; }
+
+a:hover {
+  text-decoration: none; }
+
+a:not([href]):not([tabindex]),
+a:not([href]):not([tabindex]):focus,
+a:not([href]):not([tabindex]):hover {
+  text-decoration: none; }
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+pre {
+  -ms-overflow-style: scrollbar; }
+
+img {
+  vertical-align: middle;
+  border-style: none; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+[role='button'],
+a,
+area,
+button,
+input:not([type='range']),
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation; }
+
+table {
+  border-collapse: collapse; }
+
+caption {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  color: #868e96;
+  caption-side: bottom; }
+
+th {
+  text-align: inherit; }
+
+button {
+  border-radius: 0; }
+
+button:focus {
+  outline: dotted 1px;
+  outline: -webkit-focus-ring-color auto 5px; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit; }
+
+button,
+select {
+  text-transform: none; }
+
+[type='reset'],
+[type='submit'],
+button,
+html [type='button'] {
+  -webkit-appearance: button; }
+
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner,
+button::-moz-focus-inner {
+  padding: 0;
+  border-style: none; }
+
+input[type='radio'],
+input[type='checkbox'] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type='date'],
+input[type='time'],
+input[type='datetime-local'],
+input[type='month'] {
+  -webkit-appearance: listbox; }
+
+textarea {
+  resize: vertical; }
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+legend {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  font-size: 1.5rem;
+  color: inherit;
+  white-space: normal; }
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto; }
+
+[type='search'] {
+  outline-offset: -2px;
+  -webkit-appearance: none; }
+
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button; }
+
+summary {
+  display: list-item; }
+
+template {
+  display: none; }
+
+[hidden] {
+  display: none !important; }
+
+/*******************************************
+ * © 2019 Charlie Hay
+ * ---------------------
+ * Body | Styles
+ ******************************************/
+/*******************************************
+ * © 2019 Charlie Hay
+ * ---------------------
+ * Variable | Styles
+ ******************************************/
+/* Shades */
+/* Purple */
+/* Blue */
+/* Media Width */
+body {
+  margin: 0;
+  background-color: #ffffff; }
+
+/*******************************************
+ * © 2019 Charlie Hay
+ * ---------------------
+ * Wildcard | Styles
+ ******************************************/
+* {
+  letter-spacing: none;
+  color: #222;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  font-family: 'M PLUS Rounded 1c', sans-serif; }
+
+/*******************************************
+ * © 2019 Charlie Hay
+ * ---------------------
+ * Buttons | Styles
+ ******************************************/
+button {
+  cursor: pointer; }
+  button:hover {
+    opacity: 0.8; }
+
+/*******************************************
+ * © 2019 Charlie Hay
+ * ---------------------
+ * Notification | Styles
+ ******************************************/
+.notification__wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; }
+
+.notification__message-wrapper {
+  padding: 1rem;
+  text-align: center;
+  width: calc(100% - 50px); }
+
+.notification__button-wrapper {
+  width: 50px;
+  text-align: center; }
+
+.notification__button {
+  font-size: 1.3rem;
+  height: 50px;
+  width: 50px;
+  background: none;
+  border: none; }
+</style><script charset="utf-8" src="./#fotd _ friendoftheday.com_files/main.fbdfcce01398e5cfcac6.hot-update.js"></script><script charset="utf-8" src="./#fotd _ friendoftheday.com_files/main.a05a958304ece11735ea.hot-update.js"></script><script charset="utf-8" src="./#fotd _ friendoftheday.com_files/main.391192cce8cc16ef9fc5.hot-update.js"></script><script charset="utf-8" src="./#fotd _ friendoftheday.com_files/main.3858708764f8920a72ca.hot-update.js"></script><script charset="utf-8" src="./#fotd _ friendoftheday.com_files/main.3828ba24b4879f120840.hot-update.js"></script><script charset="utf-8" src="./#fotd _ friendoftheday.com_files/main.3757f8eca6ccbb8c3f34.hot-update.js"></script><script charset="utf-8" src="./#fotd _ friendoftheday.com_files/main.9d83283fd6c12510bc7a.hot-update.js"></script><script charset="utf-8" src="./#fotd _ friendoftheday.com_files/main.a56c456ed885ddab8d25.hot-update.js"></script><script charset="utf-8" src="./#fotd _ friendoftheday.com_files/main.6b9ae573f9b568d8507c.hot-update.js"></script><script charset="utf-8" src="./#fotd _ friendoftheday.com_files/main.c0868ef8e426ba403678.hot-update.js"></script><script charset="utf-8" src="./#fotd _ friendoftheday.com_files/main.d7287d67a8fd748fe5f7.hot-update.js"></script><script charset="utf-8" src="./#fotd _ friendoftheday.com_files/main.a5e6fcd0792faca80dff.hot-update.js"></script><script charset="utf-8" src="./#fotd _ friendoftheday.com_files/main.50dc6fa5aa0c2030941c.hot-update.js"></script><script charset="utf-8" src="./#fotd _ friendoftheday.com_files/main.5f62570e550e54094a1c.hot-update.js"></script><script charset="utf-8" src="./#fotd _ friendoftheday.com_files/main.7ed70456d3cf50977200.hot-update.js"></script><script charset="utf-8" src="./#fotd _ friendoftheday.com_files/main.96f6da01662ebb31faef.hot-update.js"></script><script charset="utf-8" src="./#fotd _ friendoftheday.com_files/main.b9fdd9e68027d3a5d001.hot-update.js"></script><script charset="utf-8" src="./#fotd _ friendoftheday.com_files/main.ae2caac8209517ac226a.hot-update.js"></script><script charset="utf-8" src="./#fotd _ friendoftheday.com_files/main.e8962ff4db88db02a8f3.hot-update.js"></script></head>
+  <body cz-shortcut-listen="true">
+    <div id="root"><div class="home"><div class="swiper"><div class="swiper__wrapper"><div class="their-profile"><div class="profile"><img class="profile__picture" alt="profile picture" src="./#fotd _ friendoftheday.com_files/phillip.ef404bfe.png"><h2 class="profile__name">Phillip Duby</h2><p class="profile__bio">Born in London, Ontario, Canada. Living in Toronto where I work as a Software Developer.</p></div></div><div class="message-center"><div class="header"><img class="header__logo" alt="fotd logo" src="data:image/png;base64,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"><div class="countdown">Expires: 02:40:10</div></div><div class="messageconversation"><div class="bubble sent"><div class="bubble__message">Hey Jill, how are you doing?</div><div class="bubble__timestamp">6:33 PM</div></div><div class="bubble received"><div class="bubble__message">Hi Richard! I've been pretty good - super busy with work.</div><div class="bubble__timestamp">6:33 PM</div></div><div class="bubble sent"><div class="bubble__message">ahh that's good, you know what they say, work hard play hard.</div><div class="bubble__timestamp">6:33 PM</div></div><div class="bubble sent"><div class="bubble__message">I was wondering if you still had that cottage up in the muskokas?</div><div class="bubble__timestamp">6:33 PM</div></div><div class="bubble received"><div class="bubble__message">Yeah I do, my family was going to head up there this weekend for a little getaway, but if you're looking to rent it out from us, we could find a time in august.</div><div class="bubble__timestamp">6:33 PM</div></div><div class="bubble sent"><div class="bubble__message">what's up?!</div><div class="bubble__timestamp">6:33 PM</div></div><div class="bubble sent"><div class="bubble__message">Hey!</div><div class="bubble__timestamp">6:33 PM</div></div><div class="bubble received"><div class="bubble__message">Hey!</div><div class="bubble__timestamp">6:33 PM</div></div><div class="bubble sent"><div class="bubble__message">what's up?!</div><div class="bubble__timestamp">6:33 PM</div></div><div class="bubble sent"><div class="bubble__message">Hey!</div><div class="bubble__timestamp">6:33 PM</div></div><div class="bubble received"><div class="bubble__message">Hey!</div><div class="bubble__timestamp">6:33 PM</div></div><div class="bubble sent"><div class="bubble__message">what's up?!</div><div class="bubble__timestamp">6:33 PM</div></div></div><div class="messageinput"><input class="input" placeholder="Say Something.." value=""><button class="button"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="button__icon" height="1em" width="1em"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg></button></div></div><div class="my-profile"><div class="profile"><img class="profile__picture" alt="profile picture" src="./#fotd _ friendoftheday.com_files/charlie.bc7d5e43.png"><h2 class="profile__name">Charlie Hay</h2><p class="profile__bio">Born in London, Ontario, Canada. Living in Toronto where I work as a Software Developer.</p></div></div></div></div></div></div>
+    <div class="notification"></div>
+  <script src="./#fotd _ friendoftheday.com_files/bundle.js"></script><script src="./#fotd _ friendoftheday.com_files/1.chunk.js"></script><script src="./#fotd _ friendoftheday.com_files/main.chunk.js"></script><script src="./#fotd _ friendoftheday.com_files/main.566c883e462a2bf71758.hot-update.js"></script>
+
+</body></html>

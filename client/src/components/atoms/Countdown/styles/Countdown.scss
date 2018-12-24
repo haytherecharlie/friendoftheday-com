@@ -1,11 +1,13 @@
 /*******************************************
  * © 2018 Charlie Hay
  * ---------------------
- * MessageConversation | Styles
+ * Countdown | Styles
  ******************************************/
 
 @import '../../../../assets/styles/variable';
-.messageconversation {
-  padding: 60px 1rem 0 1rem;
-  flex-direction: column;
+.countdown {
+  font-family: countdown;
+  font-size: 20px;
+  width: 131px;
+  font-weight: 500;
 }

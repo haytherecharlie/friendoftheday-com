@@ -6,7 +6,7 @@
 
 @import '../../../../assets/styles/variable';
 .bubble {
-  flex-direction: column;
+  display: block;
   padding: 0.2rem;
   border-radius: 5px;
   padding: 0.5rem 1rem;
@@ -14,11 +14,13 @@
   max-width: 75%;
 
   .bubble__message {
-    font-weight: 800;
+    display: block;
+    font-weight: 900;
     font-size: 14px;
   }
 
   .bubble__timestamp {
+    display: block;
     font-size: 10px;
     color: $darkGray;
   }
@@ -32,7 +34,8 @@
     }
 
     .bubble__timestamp {
-      align-self: flex-start;
+      margin-top: 0.2rem;
+      text-align: left;
       color: $darkGray;
     }
   }
@@ -43,7 +46,7 @@
     color: $black;
 
     .bubble__timestamp {
-      align-self: flex-end;
+      text-align: right;
     }
   }
 }

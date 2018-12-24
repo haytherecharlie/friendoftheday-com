@@ -1,16 +1,16 @@
 /*******************************************
  * © 2019 Charlie Hay
  * ---------------------
- * MessageConversation | Tests
+ * Conversation | Tests
  ******************************************/
 import React from 'react'
 import { shallow } from 'enzyme'
-import MessageConversation from '../MessageConversation'
+import Conversation from '../Conversation'
 
-describe('MessageConversation', () => {
-  const wrapper = shallow(<MessageConversation />)
+describe('Conversation', () => {
+  const wrapper = shallow(<Conversation />)
 
   it('renders a component', () => {
-    expect(wrapper.hasClass('messageconversation')).toBe(true)
+    expect(wrapper.hasClass('conversation')).toBe(true)
   })
 })

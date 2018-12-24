@@ -1,18 +1,26 @@
 /*******************************************
  * © 2019 Charlie Hay
  * ---------------------
- * MessageConversation | Component
+ * Conversation | Component
  ******************************************/
 
-import React from 'react'
+import React, { useEffect, createRef } from 'react'
 import Bubble from '../../atoms/Bubble/Bubble'
 import { connect } from 'react-redux'
 import { format } from 'date-fns'
-import './styles/MessageConversation.scss'
+import './styles/Conversation.scss'
 
-function MessageConversation({ user, messages }) {
+function Conversation({ user, messages }) {
+  const convoRef = createRef()
+  useEffect(
+    () => {
+      convoRef.current.scroll(0, convoRef.current.scrollHeight)
+    },
+    [messages]
+  )
+
   return (
-    <div className="messageconversation">
+    <div className="conversation" ref={convoRef}>
       {messages.map((message, i) => (
         <Bubble
           key={i}
@@ -35,4 +43,4 @@ const mapDispatchToProps = {}
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(MessageConversation)
+)(Conversation)
