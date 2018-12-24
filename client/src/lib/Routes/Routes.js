@@ -21,14 +21,20 @@ function Routes({ location: { pathname } }) {
 
   useEffect(
     () => {
-      if (window.notification.listening) window.notification.hide()
+      window.notification.listening && window.notification.hide()
     },
     [pathname]
   )
 
   return (
     <Switch>
-      <Route exact path={routes.HOME} component={loggedIn ? Home : Login} />
+      <Route
+        exact
+        path={routes.HOME}
+        render={props =>
+          loggedIn ? <Home {...props} /> : <Login {...props} isAuthed={!loggedIn} />
+        }
+      />
     </Switch>
   )
 }
