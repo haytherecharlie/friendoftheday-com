@@ -8,7 +8,7 @@
 .button {
   height: 30px;
   flex: 0 0 30px;
-  background: $skyBlue;
+  background: $darkPurple;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
@@ -21,7 +21,7 @@
   }
 
   &:focus {
-    box-shadow: 0 0 0 1px $blue;
+    box-shadow: 0 0 0 1px $purple;
     outline: none;
   }
 }

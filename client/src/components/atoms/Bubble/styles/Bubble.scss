@@ -20,11 +20,11 @@
 
   .bubble__timestamp {
     font-size: 10px;
-    color: $lightGray;
+    color: $darkGray;
   }
 
   &.received {
-    background: $blue;
+    background: $purple;
     align-self: flex-start;
 
     .bubble__message {
@@ -38,7 +38,7 @@
   }
 
   &.sent {
-    background: $lightestGray;
+    background: $gray;
     align-self: flex-end;
     color: $black;
 

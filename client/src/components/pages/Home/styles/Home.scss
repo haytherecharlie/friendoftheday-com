@@ -6,11 +6,12 @@
 
 @import '../../../../assets/styles/variable';
 .home {
-  background: #e3e2dd;
+  background: $lightestPurple;
   .message-center {
     flex-direction: column;
+    position: relative;
     & > * {
-      &:first-child {
+      &:nth-child(2) {
         flex: 1 0 50%;
       }
       &:last-child {

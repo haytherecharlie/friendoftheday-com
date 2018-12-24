@@ -8,6 +8,7 @@ import React from 'react'
 import Swiper from '../../elements/Swiper/Swiper'
 import MessageInput from '../../elements/MessageInput/MessageInput'
 import MessageConversation from '../../elements/MessageConversation/MessageConversation'
+import Header from '../../elements/Header/Header'
 import './styles/Home.scss'
 
 function Home() {
@@ -16,6 +17,7 @@ function Home() {
       <Swiper>
         <div className="their-profile" />
         <div className="message-center">
+          <Header />
           <MessageConversation />
           <MessageInput />
         </div>

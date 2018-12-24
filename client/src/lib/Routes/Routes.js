@@ -15,6 +15,7 @@ function Routes({ location: { pathname } }) {
   const [auth, changeAuth] = useState('spinner')
 
   useEffect(() => {
+    // firebase.auth().signOut()
     const observer = firebase.auth().onAuthStateChanged(user => changeAuth(!!user))
     return () => observer()
   }, [])
