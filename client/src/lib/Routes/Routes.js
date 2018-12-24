@@ -12,7 +12,7 @@ import Login from '../../components/pages/Login/Login'
 import routes from '../../config/routes.json'
 
 function Routes({ location: { pathname } }) {
-  const [loggedIn, changeLogIn] = useState(false)
+  const [loggedIn, changeLogIn] = useState('spinner')
 
   useEffect(() => {
     const observer = firebase.auth().onAuthStateChanged(user => changeLogIn(!!user))
@@ -32,7 +32,7 @@ function Routes({ location: { pathname } }) {
         exact
         path={routes.HOME}
         render={props =>
-          loggedIn ? <Home {...props} /> : <Login {...props} isAuthed={!loggedIn} />
+          loggedIn === true ? <Home {...props} /> : <Login {...props} auth={loggedIn} />
         }
       />
     </Switch>
