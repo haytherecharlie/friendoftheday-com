@@ -1,0 +1,28 @@
+/*******************************************
+ * © 2018 Charlie Hay
+ * ---------------------
+ * Login | Styles
+ ******************************************/
+
+@import '../../../../assets/styles/variable';
+.login {
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('../../../../assets/images/wallpaper.jpg') no-repeat center;
+  background-size: 100%;
+
+  &__logo {
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 1rem;
+  }
+
+  .firebaseui-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
